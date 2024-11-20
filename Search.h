@@ -7,22 +7,40 @@ using namespace std;
 //   bonus! try to implement your function so that it can accept
 //     many types of data (int, char, string, etc.)
 template <typename flexibleType> // ???
-void printArray(...) {}
+void printArray(flexibleType arr[], int lenght)
+{
+    for (int i = 0 ; i < lenght ; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    cout << endl;
+}
 
 // Implement a sequential search algorithm
 // your function should search for a target value (target)
 //    within the indices of "start" to "end"
 // return true if target exists in the array within this range,
 //    return false otherwise
-bool seqSearch(string target, string arr[], int start, int end) {
+bool seqSearch(string target, string arr[], int start, int end)
+{
+    for (int i = start ; i <= end ; i++)
+    {
+        if (arr[i] == target)
+        {
+            return true;
+        }
+    }
+    
     return false;
 }
 
 // Implement an iterative binary search 
 // Return true if target exists in the array with size n,
 //    return false otherwise 
-bool binSearch(float target, float arr[], int n) {
-    return false;	
+bool binSearch(float target, float arr[], int n)
+{
+    return false;
 }
 
 // Implement a recursive binary search 
