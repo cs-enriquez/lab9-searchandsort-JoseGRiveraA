@@ -40,7 +40,33 @@ bool seqSearch(string target, string arr[], int start, int end)
 //    return false otherwise 
 bool binSearch(float target, float arr[], int n)
 {
-    return false;
+    bool real = false;
+    
+    int topI = n - 1 , floorI = 0;
+
+    int mid;
+
+    for (int i = 0 ; i <= (n/2) ; i++)
+    {
+        mid = ((topI + floorI) / 2);
+
+        if (arr[mid] == target)
+        {
+            real == true;
+        }
+
+        if (arr[mid] < target)
+        {
+            floorI == mid + 1;
+        }
+
+        if (arr[mid] > target)
+        {
+            topI == mid - 1;
+        }
+    }
+    
+    return real;
 }
 
 // Implement a recursive binary search 
@@ -48,8 +74,26 @@ bool binSearch(float target, float arr[], int n)
 //   return false otherwise
 bool binSearchR(char target, char charray[], int n) {
     // base case
+    int mid = n/2;
+
+    if (charray[mid] == target)
+    {
+        return true;
+    }
+
+    if (n == 0)
+    {
+        return false;
+    }
+
+
 
     //general case
+
+    if (charray[mid] < target)
+    {
+        
+    }
 
     return false;
 }
