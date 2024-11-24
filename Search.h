@@ -94,7 +94,14 @@ bool binSearchR(char target, char charray[], int n) {
 
     if (charray[mid] < target)
     {
-        
+        char *start = &charray[mid + 1];
+
+        return binSearchR(target, start, n/2);
+    }
+
+    if (charray[mid] > target)
+    {
+        return binSearchR(target, charray, n/2);
     }
 
     return false;
