@@ -128,10 +128,33 @@ Step 3: Finally, use your two functions above to complete the following in newSo
         *** You can make this recursive, if you wish!
 */
 
-void swap(double darray[], ...) {}
+void swap(double darray[], int a, int b)
+{
+    double temp = darray[a];
 
-int minFind(double darray[], ...) {
-    return -1;
+    darray[a] = darray[b];
+
+    darray[b] = temp;
 }
 
-void newSort(double darray[], int n) {}
+int minFind(double darray[], int size)
+{
+    int minI = 0;
+    double minV = darray[0];
+
+    for (int i = 0 ; i < size ; i++)
+    {
+        if(minV >= darray[i])
+        {
+            minI = i;
+            minV = darray[i];
+        }
+    }
+
+    return minI;
+}
+
+void newSort(double darray[], int n)
+{
+
+}
