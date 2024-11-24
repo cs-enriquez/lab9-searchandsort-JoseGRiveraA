@@ -42,27 +42,29 @@ bool binSearch(float target, float arr[], int n)
 {
     bool real = false;
     
-    int topI = n - 1 , floorI = 0;
+    int rightI = (n - 1);
+
+    int leftI = 0;
 
     int mid;
 
-    for (int i = 0 ; i <= (n/2) ; i++)
+    for (int i = 0 ; i <= (n/2); i++)
     {
-        mid = ((topI + floorI) / 2);
+        mid = (leftI + rightI) / 2;
 
         if (arr[mid] == target)
         {
-            real == true;
+            real = true;
         }
 
         if (arr[mid] < target)
         {
-            floorI == mid + 1;
+            leftI = mid + 1;
         }
 
         if (arr[mid] > target)
         {
-            topI == mid - 1;
+            rightI = mid - 1;
         }
     }
     
