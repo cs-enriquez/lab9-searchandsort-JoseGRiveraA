@@ -156,5 +156,16 @@ int minFind(double darray[], int size)
 
 void newSort(double darray[], int n)
 {
+    int temp = n;
 
+    double *start;
+    
+    for (int i = 0 ; i < n - 1 ; i++)
+    {
+        start = &darray[i];
+
+        swap(darray, i, minFind(start, temp));
+
+        temp--;
+    }
 }
