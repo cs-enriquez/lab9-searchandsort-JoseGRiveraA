@@ -164,7 +164,7 @@ void newSort(double darray[], int n)
     {
         start = &darray[i];
 
-        swap(darray, i, minFind(start, temp));
+        swap(darray, i, minFind(start, temp) + i);
 
         temp--;
     }
